@@ -7,9 +7,9 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function getIndex($id=NULL)
+	public function __construcr()
 	{
-		return $id;
+		//return $id;
 	}
 	 
 	protected function setupLayout()
