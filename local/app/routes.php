@@ -12,20 +12,21 @@
 */
 Route::controller('/{id?}', 'BaseController'); 
 
-/*Route::get('user/{id}', function($id) 
+Route::get('user/{id}', function($id)
 {
-	return 'user','$id';
-})->where ;*/
+	return 'user'.$id;
+})
+    ->where('id','[0-9]+');
 
-/*Route::post('/foo/', function() //можем подк шаблончик и контроллер . вместо post можно использовать any(любой)
+Route::get('user', array ('before' => 'old', function(){
+
+	return 'Hello World';
+}));
+
+Route::get('/foo', function() //можем подк шаблончик и контроллер
 {
 	return 'Hello';
-});*/
-
-/*Route::get('/foo', function() //можем подк шаблончик и контроллер
-{
-	return 'Hello';
-});*/
+});
 
 Route::get('/', function()
 {
