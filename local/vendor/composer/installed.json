@@ -1358,7 +1358,7 @@
                 "dev-master": "1.2-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Whoops": "src/"
