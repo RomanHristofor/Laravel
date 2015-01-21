@@ -7,9 +7,25 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
+    public $title=null;
+    public $style=array();
 	public function __construcr()
 	{
-		//return $id;
+		//parent::__construcr();
+        View::composer(['leauts.default'],function($view){
+
+        $this->title='Мой сайт';
+        $this->style=array('media/bootstrap/bootstrap.min.css','media/css/blog.css');
+
+            //передача
+        $view->with('style',$this->style)
+             ->with('style',$this->style);
+
+
+
+
+
+    });
 	}
 	 
 	protected function setupLayout()
