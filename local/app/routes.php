@@ -32,7 +32,8 @@ Route::get('/{id?}',[
     ]);
 
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
 });
+*/

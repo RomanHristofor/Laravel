@@ -1,7 +1,7 @@
 <?
 Class StaticController extends BaseController{
     public function __construct(){
-        parent::__construcr();
+        parent::__construct();
     }
     public function getIndex($id='index'){
         $text = DB::table('maintext')
