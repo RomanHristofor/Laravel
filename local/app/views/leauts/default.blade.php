@@ -1,71 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Мой сайт</title>
 
+	<!--<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
-    <title>ddvsdvdv</title>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
 
 @foreach($style as $style)
     {{HTML::style($style)}}
     @endforeach
-
-
 @foreach($script as $script)
     {{HTML::script($script)}}
     @endforeach
 
 </head>
-
 <body>
+	<div id="wrapper">
+		<header>
+			<a href="/"><img src="media/image/logo.png" alt="Whitesquare logo"></a>
+			<form name="search" action="#" method="get">
+				<input type="text" name="q" placeholder="Search"><button type="submit">GO</button>
+			</form>
+		</header>
+		<nav>
+			<ul class="top-menu">
+				<li><a href="{{asset('/')}}">HOME</a></li>
+				<!--<li class="active">ABOUT US</li>
+				<li><a href="/services/">Wedding Foto</a></li>-->
 
-<div class="blog-masthead">
-    <div class="container">
-        <nav class="blog-nav">
+				<li><a href="">REVIEWS</a></li>
 
+				<li><a href="{{asset('about')}}">ABOUT US</a></li>
 
-            <a href="{{asset('/')}}">Главная</a>
-            <a href="{{asset('about')}}">Обо мне</a>
+				<li><a href="/contact/">CONTACT</a></li>
 
-        </nav>
-    </div>
-</div>
+			</ul>
+		</nav>
+		<div id="heading">
+			<h3>ABOUT US</h3>
+		</div>
+		<aside>
+			<nav>
+				<ul class="aside-menu">
+					<li class="">Wedding Foto</li>
+					<li><a href="">Love Story</a></li>
+					<li><a href="">Wedding Video</a></li>
 
-<div class="container">
+				</ul>
+			</nav>
 
-    <div class="blog-header">
-        <h1 class="blog-title">Профессиональная foto & video съемка</h1>
-        <p class="lead blog-description">Художественная фотография и видео, обслуживание свадеб.</p>
-    </div>
-
-    <div class="row2">
-
-        <div class="col-sm-9 blog-main">
-
+			<p>
+				<img src="media/image/my.jpg" width="230" height="180" alt="">
+			</p>
+		</aside>
 @yield('content')
 
-        </div>
+	</div>
 
 
+	<footer>
+		<div id="footer">
+			<div id="twitter">
+				<h3>TWITTER FEED</h3>
 
-    </div>
-
-</div>
-
-<footer class="blog-footer">
-    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    <p>
-        <a href="#">Back to top</a>
-    </p>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="media/bootstrap/js/bootstrap.min.js"></script>
-<script src="media/bootstrap/js/docs.min.js"></script>
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+			</div>
+			<div id="sitemap">
+				<h3>SITEMAP</h3>
+				<div>
+					<a href="/home/">Home</a>
+					<a href="/about/">About</a>
+					<a href="/services/">Services</a>
+				</div>
+				<div>
+					<a href="/partners/">Partners</a>
+					<a href="/customers/">Support</a>
+					<a href="/contact/">Contact</a>
+				</div>
+			</div>
+			<div id="social">
+				<h3>SOCIAL NETWORKS</h3>
+				<a href="http://twitter.com/" class="social-icon twitter"></a>
+				<a href="http://facebook.com/" class="social-icon facebook"></a>
+				<a href="http://plus.google.com/" class="social-icon google-plus"></a>
+				<a href="http://vimeo.com/" class="social-icon-small vimeo"></a>
+				<a href="http://youtube.com/" class="social-icon-small youtube"></a>
+				<a href="http://flickr.com/" class="social-icon-small flickr"></a>
+				<a href="http://instagram.com/" class="social-icon-small instagram"></a>
+				<a href="/rss/" class="social-icon-small rss"></a>
+			</div>
+			<div id="footer-logo">
+				<a href="/"><img src="media/image/footer-logo.png" alt="Whitesquare logo"></a>
+				<p>Copyright &copy; 2012 Whitesquare. A <a href="http://pcklab.com">pcklab</a> creation </p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

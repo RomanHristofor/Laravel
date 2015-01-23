@@ -15,8 +15,8 @@ class BaseController extends Controller {
         View::composer(['leauts.default'],function($view){
 
         $this->title='Мой сайт';
-        $this->style=array('media/bootstrap/bootstrap.min.css','media/css/blog.css');
-            $this->script=array('media/bootstrap/js/bootstrap.min.js','media/bootstrap/js/docs.min.js');
+        $this->style=array('media/css/styles.css','http://fonts.googleapis.com/css?family=Oswald:400,300');
+            $this->script=array('http://html5shiv.googlecode.com/svn/trunk/html5.js');
             //передача
         $view->with('style',$this->style)
              ->with('script',$this->script);

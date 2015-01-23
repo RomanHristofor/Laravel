@@ -1,26 +1,77 @@
 @extends('leauts.default')
 @section('content')
 
-<div class="col-sm-3">
-    <div class="sidebar-module sidebar-module-inset">
+<div class="">
+    <div class="">
 
         <h2>{{$text->name}}</h2>
 
-        <h4>Приветствую Вас дорогие друзья!</h4>
-        <p>Меня зовут Роман, я свадебный фотограф!</p>
-        <p>Понравились мои работы, позвоните мне!</p>
+    	<blockquote>
+    				<p>
+    					&ldquo;Приветствую Вас дорогие друзья!<br> Меня зовут Роман, я свадебный фотограф.
+    					       Понравились мои работы, позвоните мне!&rdquo;
+    				</p>
+    				<cite></cite>
+    	</blockquote>
+
     </div>
 
-    <div class="sidebar-module">
+    <div class="">
 
-        <h2>{{$text->body}}</h2>
 
-        <h4>Elsewhere</h4>
-        <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-        </ol>
+        <section>
+        <h3>{{$text->body}}</h3>
+
+   		<figure>
+  			<img src="media/image/1/1.JPG" width="640" height="480" alt="">
+    	</figure>
+        			<h2>Саша & Маша</h2>
+            			<div class="team-row">
+            				<figure>
+            					<img src="media/image/1/2.JPG" width="96" height="96" alt="">
+            					<figcaption><span>Саша & Маша</span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span>Коля & Оля</span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            			</div>
+            			<div class="team-row">
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            				<figure>
+            					<img src="images/sample.png" width="96" height="96" alt="">
+            					<figcaption><span></span></figcaption>
+            				</figure>
+            			</div>
+        </section>
+
     </div>
 </div>
 
