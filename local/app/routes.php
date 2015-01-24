@@ -26,6 +26,9 @@ Route::get('/foo', function() 	//можем подк шаблончик и ко�
 {
 	return 'Hello';
 });*/
+//роут для регистрации/авторизац
+Route::controller('auth', 'AuthController');
+
 Route::get('/{id?}',[
     'as'=>'main',
     'uses'=>'StaticController@getIndex',
