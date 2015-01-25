@@ -15,8 +15,13 @@ class BaseController extends Controller {
 		//parent::__construct();
         View::composer(['leauts.default'],function($view){
 
-            $view->title='Мой сайт';
+            $view->title='Сайт профессионального фотографа';
 
+if(Session::get('user_id')){
+    echo Session::get('user_id');
+}else{
+    echo 'None login';
+}
 
             //передача
         $view->with('style',$this->style)
