@@ -36,11 +36,11 @@
 
 				<li><a href="{{asset('about')}}">ABOUT</a></li>
 
-				<li><a href="{{asset('contact')}}">CONTACT</a></li>
+				<li><a href="{{asset('')}}">CONTACT</a></li>
                 @if(Session::get('user_id'))
                 <li><a href="{{asset('auth/logout')}}">LOG OUT</a></li>
                 @else
-                <li><a href="{{asset('auth/reg')}}">Reg</a></li>
+                <li><a href="{{asset('auth/reg')}}">CHECK IN</a></li>
                 <li><a href="{{asset('auth/login')}}">LOG IN</a></li>
                 @endif
 			</ul>
