@@ -26,6 +26,9 @@ Route::get('/foo', function() 	//можем подк шаблончик и ко�
 {
 	return 'Hello';
 });*/
+Route::group(array('before'=>'auth'),function(){
+    Route::controller('cabinet','MainController');
+});
 //роут для регистрации/авторизац
 Route::controller('auth', 'AuthController');
 

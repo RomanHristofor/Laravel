@@ -14,14 +14,14 @@ class BaseController extends Controller {
 	{
 		//parent::__construct();
         View::composer(['leauts.default'],function($view){
+            if(Session::get('user_id')){
+                $links = View::make('templates.userauth');
+            }else{
+                $links = View::make('templates.usernotauth');
+            }
+            $view->with('links',$links);
 
             $view->title='Сайт профессионального фотографа';
-
-if(Session::get('user_id')){
-    echo Session::get('user_id');
-}else{
-    echo 'None login';
-}
 
             //передача
         $view->with('style',$this->style)
