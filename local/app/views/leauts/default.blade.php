@@ -50,7 +50,7 @@
 		<aside>
 			<nav>
 				<ul class="aside-menu">
-					<li class="">Wedding Foto</li>
+					<li><a href="">Wedding Foto</a></li>
 					<li><a href="">Love Story</a></li>
 					<li><a href="">Wedding Video</a></li>
 
