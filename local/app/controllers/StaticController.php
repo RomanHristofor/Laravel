@@ -6,9 +6,9 @@ Class StaticController extends BaseController{
     public function getIndex($id='index'){
         $text = DB::table('maintext')
             ->where('url','=',$id)
-         ->first();
+            ->first();
 
-       return View::make('static')->with('text',$text);
+        return View::make('static')->with('text',$text);
 
 
     }

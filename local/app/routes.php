@@ -26,11 +26,16 @@ Route::get('/foo', function() 	//можем подк шаблончик и ко�
 {
 	return 'Hello';
 });*/
+
 Route::group(array('before'=>'auth'),function(){
     Route::controller('cabinet','MainController');
 });
 //роут для регистрации/авторизац
 Route::controller('auth', 'AuthController');
+
+Route::group(array('before'=>'admin'),function(){
+    Route::controller('adminka','AdminController');
+});
 
 Route::get('/{id?}',[
     'as'=>'main',

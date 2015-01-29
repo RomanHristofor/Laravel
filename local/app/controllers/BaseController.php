@@ -28,6 +28,7 @@ class BaseController extends Controller {
         $view->with('style',$this->style)
              ->with('script',$this->script);
 
+            //echo Auth::user()->id;
 
     });
 	}

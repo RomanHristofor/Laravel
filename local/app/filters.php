@@ -35,8 +35,8 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (!Session::get('user_id'))//Auth::guest()
-	{
+        if (!Session::get('user_id'))//Auth::guest()
+        {
 		if (Request::ajax())
 		{
 			return Response::make('Unauthorized', 401);
@@ -48,6 +48,23 @@ Route::filter('auth', function()
 	}
 });
 
+Route::filter('admin', function()
+{
+    if (Session::get('user_id'))
+    {
+        $user=DB::table('users')
+            ->where('id','=',Session::get('user_id'))
+            ->first();
+        if (!$user->isAdmin==1)
+        {
+            return Redirect::to('auth/login');
+        }
+
+    }else
+    {
+        return Redirect::to('auth/login');
+    }
+});
 
 Route::filter('auth.basic', function()
 {
