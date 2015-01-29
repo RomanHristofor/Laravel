@@ -53,19 +53,19 @@
                         <div class="carousel-caption">            </div>
                     </div>
                     <div class="item">
-                        <img src="media/image/1/6.jpg" alt="...">
-                        <div class="carousel-caption">             </div>
-                    </div>
-                    <div class="item">
                         <img src="media/image/1/7.jpg" alt="...">
-                        <div class="carousel-caption">            </div>
+                        <div class="carousel-caption">             </div>
                     </div>
                     <div class="item">
                         <img src="media/image/1/8.jpg" alt="...">
+                        <div class="carousel-caption">            </div>
+                    </div>
+                    <div class="item">
+                        <img src="media/image/1/11.jpg" alt="...">
                         <div class="carousel-caption">             </div>
                     </div>
                     <div class="item">
-                        <img src="media/image/1/9.jpg" alt="...">
+                        <img src="media/image/1/12.jpg" alt="...">
                         <div class="carousel-caption">            </div>
                     </div>
 
