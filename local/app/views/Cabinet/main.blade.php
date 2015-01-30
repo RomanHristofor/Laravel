@@ -5,8 +5,12 @@
 <h3>Вы можете оставить Ваш комментарий</h3>
 
    <p>Пожалуйста, заполните обязательные поля.</p>
-
-    {{Form::open(array('url'=>'auth/login','method'=>'POST'))}}
+@if($errors)
+@foreach($errors->all() as $err)
+<div style="color:red">{{$err}}</div>
+@endforeach
+@endif
+    {{Form::open(array('url'=>'cabinet','method'=>'POST'))}}
 
 	{{Form::text('username','',array('placeholder'=>'Логин'))}}<br>
 
