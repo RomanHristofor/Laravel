@@ -36,7 +36,7 @@
 
 				<li><a href="{{asset('about')}}">ABOUT</a></li>
 
-				<li><a href="{{asset('')}}">CONTACT</a></li>
+				<li><a href="{{asset('contact')}}">CONTACT</a></li>
 
                 <li><a href="{{asset('auth/reg')}}">CHECK IN</a></li>
                 {{$links}}
@@ -61,9 +61,8 @@
 				<img src="media/image/my.jpg" width="230" height="180" alt="">
 			</p>
 		</aside>
-@yield('content')
 
-	</div>
+@yield('content')
 
 
 	<footer>

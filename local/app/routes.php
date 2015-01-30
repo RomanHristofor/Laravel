@@ -26,6 +26,11 @@ Route::get('/foo', function() 	//можем подк шаблончик и ко�
 {
 	return 'Hello';
 });*/
+//роут на форму комментария
+Route::post('about',[
+    'as'=>'about',
+    'uses'=>'StaticController@postForma',
+]);
 
 Route::group(array('before'=>'auth'),function(){
     Route::controller('cabinet','MainController');
