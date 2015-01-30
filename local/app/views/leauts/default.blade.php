@@ -79,14 +79,14 @@
 				</div>
 			</div>
 			<div id="twitter">
-            				<h3>WEDDING VIDEO</h3>
-                            <a href="">Wedding Video</a>
+            	<h3>WEDDING VIDEO</h3>
+                <a href="">Wedding Video</a>
             </div>
 			<div id="social">
 				<h3>SOCIAL NETWORKS</h3>
-				<a href="http://vk.com" class="">vk</a><br>
-				<a href="http://twitter.com" class="">twitter</a><br>
-				<a href="http://facebook.com" class="">facebook</a><br>
+				<a href="http://vk.com" target="blank"class="">vk</a><br>
+				<a href="http://twitter.com" target="blank"class="">twitter</a><br>
+				<a href="http://facebook.com" target="blank"class="">facebook</a><br>
 			</div>
 			<div id="footer-logo">
 				<!--<a href="/"><img src="media/image/footer-logo.png" alt="Whitesquare logo"></a>

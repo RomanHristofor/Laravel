@@ -58,11 +58,10 @@ Class AuthController extends BaseController{
             }else{
                 echo 'no hash';
             }
-
         }else{
             echo 'mistake';
         }
-        return Redirect::to('/');//в личный кабинет пользователя
+        return Redirect::to('cabinet');//в личный кабинет пользователя
     }
     public function getLogout(){
         Session::put('user_id', null);
