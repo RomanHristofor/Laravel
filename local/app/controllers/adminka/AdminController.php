@@ -38,4 +38,53 @@ Class AdminController extends BaseController{
         DB::table('foto')->where('id','=',$id)->delete();
         return Redirect::to('adminka');
     }
+    public function getForma(){
+        return View::make('templates.addfoto');
+    }
+    public function postForma(){
+    $data = Input::all();
+        $rules = array('name'=>array('required'));
+        $validation = Validator::make($data,$rules);
+        if($validation->fails()){
+            $errors= $validation->message();
+        }
+        if(!empty($errors)){
+            return Redirect::to('adminka/forma')->withErrors($errors);//!
+        }
+        if(empty($errors)){
+
+           $file = Input::file('file');
+
+            if(!empty($file)){
+                $picfile = $this->_img_edit($file,'photo');
+                //echo "fffl";
+                DB::table('foto')->insert(
+                    array(
+                        'name' => $data['name'],
+                        'photo' => $picfile)
+                );
+            }
+
+        }
+
+    }
+    protected function _img_edit($file,$cat){
+        //echo "fffl";
+        $destinationPath='media/uploads/'.$cat.'/';
+        if(!$destinationPath){
+            @mkdir($destinationPath,0777);
+        }
+        $filename = date('Y_m_d_h_i_s').'.'.$file->getClientOriginalExtension();
+        $uploads_success = $file->move($destinationPath,$filename);
+        if($uploads_success){
+           $im = Image::make($destinationPath. $filename);
+            $im -> resize(200,null, function($con){
+               $con->aspectRatio();
+            });
+            $pic_small ='s_'.$filename;
+            $im->save($destinationPath. $pic_small);
+            return $filename;
+
+        }else false;
+    }
 }

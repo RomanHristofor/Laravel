@@ -2,6 +2,7 @@
 @section('content')
 
 <h2>Добро пожаловать в Админку</h2>
+<a href="{{asset('adminka/forma')}}">Добавить Фото</a>
 <table width="100%" border="1px">
 
     <tr width="100%">
@@ -13,6 +14,7 @@
     <tr>
     <td>{{$foto->photo}}</td>
     <td>{{$foto->name}}</td>
+
     <td><a href="#" onclick="delete_position('{{asset('adminka/delete/'.$foto->id)}}','Вы действительно хотите удалить?')">Удалить</a></td>
 
     </tr>
