@@ -50,7 +50,7 @@
 		<aside>
 			<nav>
 				<ul class="aside-menu">
-					<li><a href="">Wedding Foto</a></li>
+					<li><a href="{{asset('')}}">Wedding Foto</a></li>
 					<li><a href="">Love Story</a></li>
 					<li><a href="">Wedding Video</a></li>
 
@@ -68,7 +68,7 @@
 	<footer>
 		<div id="footer">
 			<div id="twitter">
-				<h3>WEDDING FOTO</h3>
+				<h3 align="">WEDDING FOTO</h3>
                 <a href="">Wedding Foto</a>
 			</div>
 			<div id="sitemap">
