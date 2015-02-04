@@ -49,7 +49,7 @@ Class AdminController extends BaseController{
             $errors= $validation->message();
         }
         if(!empty($errors)){
-            return Redirect::to('adminka/forma')->withErrors($errors);//!
+            return Redirect::to('adminka/forma')->withErrors($errors);
         }
         if(empty($errors)){
 
@@ -64,8 +64,7 @@ Class AdminController extends BaseController{
                         'photo' => $picfile)
                 );
             }
-
-        }
+        }return Redirect::to('adminka');
 
     }
     protected function _img_edit($file,$cat){
