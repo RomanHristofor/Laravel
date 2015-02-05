@@ -1,5 +1,6 @@
-@extends ('leauts.default')
+@extends('leauts.default')
 @section('content')
+
 <div class="reg">
 @if($errors)
 @foreach($errors->all() as $err)
@@ -7,15 +8,16 @@
 @endforeach
     @endif
 
-    <h2>Авторизация</h2>
+    <h2 align="center">Авторизация</h2>
     {{Form::open (array('url'=>'auth/login',
 						'method'=>'POST'))}}
-	{{Form::text('username','',array('placeholder'=>'login'))}}<br>
+	{{Form::text('username','',array('placeholder'=>'логин'))}}<br>
 
 	{{Form::password('password','',array())}}<br>
 
-	{{Form::submit('Log in')}}<br>
+	{{Form::submit('Войти')}}<br>
 	
 	{{Form::token() .Form::close();}}
 </div>
+
 @stop

@@ -35,7 +35,7 @@
     <div class="form-group">
         <div class="col-sm-2">&nbsp;</div>
         <div class="col-sm-5">
-            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <button type="submit" class="">Зарегистрироваться</button>
         </div>
     </div>
 </div>
