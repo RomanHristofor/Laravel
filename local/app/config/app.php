@@ -94,6 +94,7 @@ return array(
 	*/
 
 	'providers' => array(
+		'Barryvdh\Debugbar\ServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -149,6 +150,7 @@ return array(
 	*/
 
 	'aliases' => array(
+		'Debugbar'			=>'Barryvdh\Debuger\Facades',
 		'Image'			=>'Intervention\Image\Facades\Image',
 		'App'               => 'Illuminate\Support\Facades\App',
 		'Artisan'           => 'Illuminate\Support\Facades\Artisan',

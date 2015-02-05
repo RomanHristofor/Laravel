@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
+		"barryvdh/laravel-debugbar": "*",
 		"laravel/framework": "4.2.*",
 		"intervention/image": "~2.1"
 	},

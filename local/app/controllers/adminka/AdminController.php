@@ -67,6 +67,51 @@ Class AdminController extends BaseController{
         }return Redirect::to('adminka');
 
     }
+    //подключает шаблон editfoto.blade.php
+    public function getEdit($id){
+        return View::make('templates.editfoto')->with('id',$id);
+    }
+    //редактирует название фото
+    public function postEdit($id){
+        $data = Input::all();
+        $rules = array('name'=>array('required'));
+        $validation = Validator::make($data,$rules);
+        if($validation->fails()){
+            $errors= $validation->message();
+        }
+        if(!empty($errors)){
+            return Redirect::to('adminka/Edit')->withErrors($errors);
+        }
+        if(empty($errors)){
+                DB::table('foto')->where('id',$id)
+                                ->update(
+                                         array(
+                                               'name' => $data['name'],
+                                                )
+                                        );
+        }return Redirect::to('adminka');
+
+    }
+    //show
+    public function getShow($id){
+        DB::table('foto')->where('id',$id)
+            ->update(
+                array(
+                    'showhide' => 'show',
+                )
+            );
+        return Redirect::to('adminka');
+    }
+    //hide
+    public function getHide($id){
+        DB::table('foto')->where('id',$id)
+            ->update(
+                array(
+                    'showhide' => 'hide',
+                )
+            );
+        return Redirect::to('adminka');
+    }
     protected function _img_edit($file,$cat){
         //echo "fffl";
         $destinationPath='media/uploads/'.$cat.'/';
