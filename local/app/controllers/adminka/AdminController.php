@@ -46,7 +46,7 @@ Class AdminController extends BaseController{
         $rules = array('name'=>array('required'));
         $validation = Validator::make($data,$rules);
         if($validation->fails()){
-            $errors= $validation->message();
+            $errors= $validation->messages();
         }
         if(!empty($errors)){
             return Redirect::to('adminka/forma')->withErrors($errors);
@@ -77,10 +77,10 @@ Class AdminController extends BaseController{
         $rules = array('name'=>array('required'));
         $validation = Validator::make($data,$rules);
         if($validation->fails()){
-            $errors= $validation->message();
+            $errors= $validation->messages();
         }
         if(!empty($errors)){
-            return Redirect::to('adminka/Edit')->withErrors($errors);
+            return Redirect::to('adminka/edit/'.$id)->withErrors($errors);
         }
         if(empty($errors)){
                 DB::table('foto')->where('id',$id)

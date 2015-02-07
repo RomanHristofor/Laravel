@@ -18,7 +18,7 @@
     <div class="">
 
         <section>
-        <h3>{{$text->body}}</h3>
+        {{$text->body}}
             @if($text->url=='index')
             @include('templates/carusel')
             @endif

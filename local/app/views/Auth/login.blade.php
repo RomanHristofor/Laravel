@@ -8,7 +8,7 @@
 @endforeach
     @endif
 
-    <h2 align="center">Авторизация</h2>
+    <h2>Авторизация</h2>
     {{Form::open (array('url'=>'auth/login',
 						'method'=>'POST'))}}
 	{{Form::text('username','',array('placeholder'=>'логин'))}}<br>

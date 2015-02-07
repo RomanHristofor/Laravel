@@ -50,7 +50,7 @@
 		<aside>
 			<nav>
 				<ul class="aside-menu">
-					<li><a href="{{asset('')}}">Wedding Foto</a></li>
+					<li><a href="{{asset('fotos')}}">Wedding Foto</a></li>
 					<li><a href="">Love Story</a></li>
 					<li><a href="">Wedding Video</a></li>
 
@@ -64,7 +64,7 @@
 
 @yield('content')
 
-
+<br style="clear:both" />
 	<footer>
 		<div id="footer">
 			<div id="twitter">
