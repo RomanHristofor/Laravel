@@ -20,7 +20,7 @@ $('.tovs a').bind('click',function(event){
 	//добавл к мод окну закрыв ссылку
 $('<a>').attr('href','#')
 		.addClass('modal-class-btn')
-		.html('фото')
+		.html('&','time')
 		.click(function(event){
 				$('.model-window').remove();
 		})
@@ -30,16 +30,16 @@ $('#jquery-overlays').fadeOut(2000,function(){
 	$(this).remove();
 });
 	//вызов Ajax
-/* $ajax({
+    $.ajax({
 	type:'GET',
 	url:'ajax',
-	data:'id + data',
+	data:'id' + 'data',
 	success:function(data){
 		modal:append(data);
-	}
+	},
 	error:function(err){
 		modal:append(err);
 	}
-}); */
+});
 });
 });
