@@ -30,10 +30,10 @@ $('#jquery-overlays').fadeOut(2000,function(){
 	$(this).remove();
 });
 	//вызов Ajax
-    $.ajax({
+    $ajax({
 	type:'GET',
 	url:'ajax',
-	data:'id' + 'data',
+	data:'id='+data,
 	success:function(data){
 		modal:append(data);
 	},

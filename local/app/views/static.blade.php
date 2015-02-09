@@ -19,6 +19,7 @@
 
         <section>
         {{$text->body}}
+         </section>
             @if($text->url=='index')
             @include('templates/carusel')
             @endif
@@ -32,7 +33,7 @@
             <script src="media/bootstrap/js/docs.min.js"></script>-->
             <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
             <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
-        </section>
+
 
 
     </div>
