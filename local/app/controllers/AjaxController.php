@@ -1,13 +1,12 @@
 <?
-Class AjaxController extends BaseController{
-    public function __construct(){
-        parent::__construct();
-        $this->script[]='media/js/fotos.js';//при клике увеличивает фото
-    }
+Class AjaxController extends Controller{
+   public function getIndex(){
+        $_GET['id']= (int)$_GET['id'];
+        $tovs = DB::table('foto')->where('id','=',$_GET['id'])
+                                ->first();
 
-    public function getIndex(){
 
-        return View::make('templates.fotos')->with('tovs',$tovs);
+        return View::make('templates.ajax')->with('tovs',$tovs);
     }
 
 }

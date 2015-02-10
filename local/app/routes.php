@@ -26,7 +26,9 @@ Route::get('/foo', function() 	//можем подк шаблончик и ко�
 {
 	return 'Hello';
 });*/
-Route::controller('Ajax', 'AjaxController');
+Route::controller('cart', 'CartController');
+
+Route::controller('ajax', 'AjaxController');
 Route::controller('fotos','ProductsController');
 //роут на форму комментария
 Route::post('about',[
