@@ -2,18 +2,27 @@
 Class CartController extends BaseController{
     public function __construct(){
         parent::__construct();
-        //$this->script[]='media/js/fotos.js';//при клике увеличивает фото
+
+        $this->script[]='media/bootstrap/js/admin.js';
     }
 
-    public function postIndex(){
+    public function postIndex($id){
+        $data = Input::all();
+        $id = (int)$id;
+        $_POST['colvo'] = (int)$_POST['colvo'];
 
-       echo $id;
+        setcookie($id,$_POST['colvo'],time()+3600,'/');
+        return Redirect::to('cart/index/');
 
-
+    }
+    public function getDelete($id){
+        setcookie($id,null,time()-3600,'/');
+        return Redirect::to('cart/index/');
     }
     public function getIndex(){
 
-        print_r ($_COOKIE);
+        return View::make('templates.basketorder');
+
 
 
     }

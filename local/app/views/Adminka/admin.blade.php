@@ -24,8 +24,8 @@
     <tr>
         <td>{{$foto->photo}}</td>
         <td>{{$foto->name}}</td>
-        <td><a href="#" onclick="delete_position('{{asset('adminka/delete/'.$foto->id)}}','Вы действительно хотите удалить?')">{{Form::submit('Удалить фото')}}</a><br>
-            <a href="{{asset('adminka/edit/'.$foto->id)}}">{{Form::submit('Редактировать Фото')}}</a><br>
+        <td><a href="#" onclick="delete_position('{{asset('adminka/delete/'.$foto->id)}}','Вы действительно хотите удалить?')">Удалить фото</a><br>
+            <a href="{{asset('adminka/edit/'.$foto->id)}}">Редактировать Фото</a><br>
             <a href="{{$showhide}}">{{Form::submit($showhide_world)}}</a>
         </td>
 

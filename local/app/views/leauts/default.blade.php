@@ -39,6 +39,7 @@
 				<li><a href="{{asset('contact')}}">CONTACT</a></li>
 
                 <li><a href="{{asset('auth/reg')}}">CHECK IN</a></li>
+
                 {{$links}}
 
 
@@ -53,6 +54,7 @@
 					<li><a href="{{asset('fotos')}}">Wedding Foto</a></li>
 					<li><a href="">Love Story</a></li>
 					<li><a href="">Wedding Video</a></li>
+                    <li><a href="{{asset('cart')}}">Basket Order</a></li>
 
 				</ul>
 			</nav>

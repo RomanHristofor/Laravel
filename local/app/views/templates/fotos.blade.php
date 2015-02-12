@@ -11,6 +11,12 @@
     <div class="tovs">
         <a href='#' data="{{$one->id}}" class="picsmall">{{$one->name}}</a>
         {{$pic}}
+
+        {{Form::open(array('url'=>'cart/index/'.$one->id))}}
+
+        <input type="number" min="0" name="colvo"/>
+        <input type="submit">
+        {{Form::close()}}
 </div>
     @endforeach
 
