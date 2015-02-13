@@ -23,12 +23,12 @@
         <td>{{$tovs->photo}}</td>
         <td>{{$tovs->name}}</td>
         <td>{{$price}}</td>
-        <td>{{Form::open(array('url'=>'cart/index/'.$key))}}
+        <td>{{Form::open(array('url'=>'basket/index/'.$key))}}
             {{Form::number('colvo',$value,array('min'=>'0','class'=>'size','max'=>999))}}шт
             {{Form::submit('изменить')}}
             {{Form::close()}}</td>
         <td>{{$sum.'$'}}</td>
-        <td><a href="#" onclick="delete_position('{{asset('cart/delete/'.$tovs->id)}}','Вы действительно хотите удалить?')">Удалить фото</a></td>
+        <td><a href="#" onclick="delete_position('{{asset('basket/delete/'.$tovs->id)}}','Вы действительно хотите удалить?')">Удалить фото</a></td>
 
 
     </tr>
@@ -39,5 +39,15 @@
         <td colspan="2">{{$itogo.'$'}}</td>
     </tr>
 </table>
+        {{Form::open (array('url'=>'auth/login','method'=>'POST'))}}
+
+        {{Form::text('username','',array('placeholder'=>'Ваше имя*'))}}<br>
+
+        {{Form::text('phone','',array('placeholder'=>'Ваш телефон*'))}}<br>
+
+        {{Form::submit('Подтвердить заказ')}}<br>
+        <!--<input type="reset" value="Очистить">-->
+
+        {{Form::token() .Form::close();}}
 
 @stop

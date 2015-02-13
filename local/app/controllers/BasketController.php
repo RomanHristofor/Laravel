@@ -1,5 +1,5 @@
 <?
-Class CartController extends BaseController{
+Class BasketController extends BaseController{
     public function __construct(){
         parent::__construct();
 
@@ -12,12 +12,12 @@ Class CartController extends BaseController{
         $_POST['colvo'] = (int)$_POST['colvo'];
 
         setcookie($id,$_POST['colvo'],time()+3600,'/');
-        return Redirect::to('cart/index/');
+        return Redirect::to('basket/index/');
 
     }
     public function getDelete($id){
         setcookie($id,null,time()-3600,'/');
-        return Redirect::to('cart/index/');
+        return Redirect::to('basket/index/');
     }
     public function getIndex(){
 

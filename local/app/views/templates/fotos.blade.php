@@ -12,7 +12,7 @@
         <a href='#' data="{{$one->id}}" class="picsmall">{{$one->name}}</a>
         {{$pic}}
 
-        {{Form::open(array('url'=>'cart/index/'.$one->id))}}
+        {{Form::open(array('url'=>'basket/index/'.$one->id))}}
 
         <input type="number" min="0" name="colvo"/>
         <input type="submit">
