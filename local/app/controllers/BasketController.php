@@ -23,8 +23,6 @@ Class BasketController extends BaseController{
 
         return View::make('templates.basketorder');
 
-
-
     }
 
 }

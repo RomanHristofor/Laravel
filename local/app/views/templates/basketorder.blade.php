@@ -19,6 +19,7 @@
     @if($key > 0)
     <!--{{$_COOKIE[$key]}}вывод кук на экран-->
     <?$tovs = DB::table('foto')->where('id','=',$key)->first();?>
+    @if(isset($tovs->id))
     <tr>
         <td>{{$tovs->photo}}</td>
         <td>{{$tovs->name}}</td>
@@ -29,9 +30,8 @@
             {{Form::close()}}</td>
         <td>{{$sum.'$'}}</td>
         <td><a href="#" onclick="delete_position('{{asset('basket/delete/'.$tovs->id)}}','Вы действительно хотите удалить?')">Удалить фото</a></td>
-
-
     </tr>
+    @endif
     @endif
     @endforeach
     <tr>
@@ -39,7 +39,7 @@
         <td colspan="2">{{$itogo.'$'}}</td>
     </tr>
 </table>
-        {{Form::open (array('url'=>'auth/login','method'=>'POST'))}}
+        {{Form::open (array('url'=>'basket/login','method'=>'POST'))}}
 
         {{Form::text('username','',array('placeholder'=>'Ваше имя*'))}}<br>
 
