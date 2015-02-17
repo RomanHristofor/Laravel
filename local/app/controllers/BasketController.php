@@ -24,5 +24,37 @@ Class BasketController extends BaseController{
         return View::make('templates.basketorder');
 
     }
+    public function postOrders(){
+        $validation = Validator::make(Input::all(), array(
+
+            'name'  => 'required',
+
+            'phone'  => 'required',
+        ));
+        if ($validation->fails()) {
+            // В случае провала, редиректим обратно с ошибками и самими введенными данными
+            return Redirect::to('basketorder')->withErrors($validation)->withInput();
+        }
+        //
+        $arr = array();
+        foreach($_COOKIE as $key => $value){
+            $key = (int)$key;
+            if($key>0){
+                $arr[$key] = $value;
+                setcookie($key, null,time()-3600,'/');
+            }
+        }
+        $body = serialize($arr);
+        DB::table('orders')->insert(
+            array('name'=>Input::get('name'),
+                'phone'=>Input::get('phone'),
+                'body'=>$body,
+
+                'created_at'=>date('Y-m-d h:i:s'),
+                'updated_at'=>date('Y-m-d h:i:s'),
+            )
+        );
+        return Redirect::to('/');
+    }
 
 }

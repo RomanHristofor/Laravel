@@ -16,7 +16,6 @@ class Orders extends Migration {
 
             $table->increments('id');
             $table->string('name',60);
-            $table->string('email')->unique();
 
             $table->string('phone',60);
             $table->text('body');
