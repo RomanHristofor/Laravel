@@ -35,7 +35,7 @@ Class BasketController extends BaseController{
             // В случае провала, редиректим обратно с ошибками и самими введенными данными
             return Redirect::to('basketorder')->withErrors($validation)->withInput();
         }
-        //
+        //удаляем куку заказа, после подтверждения отправления заказа
         $arr = array();
         foreach($_COOKIE as $key => $value){
             $key = (int)$key;
@@ -54,7 +54,7 @@ Class BasketController extends BaseController{
                 'updated_at'=>date('Y-m-d h:i:s'),
             )
         );
-        return Redirect::to('/');
+        return Redirect::to('thanks');
     }
 
 }

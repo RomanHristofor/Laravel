@@ -15,7 +15,7 @@
 
     </div>
 
-    <div class="">
+    <div class="content">
 
         <section>
         {{$text->body}}

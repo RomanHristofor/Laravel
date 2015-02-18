@@ -39,6 +39,7 @@
         <td colspan="2">{{$itogo.'$'}}</td>
     </tr>
 </table>
+
         {{Form::open (array('url'=>'basket/orders','method'=>'POST'))}}
 
         {{Form::text('name','',array('placeholder'=>'Ваше имя*'))}}<br>
