@@ -23,6 +23,7 @@
             @if($text->url=='index')
             @include('templates/carusel')
             @endif
+
             @if($text->url=='about')
             @include('templates/comments')
             @endif

@@ -30,9 +30,9 @@
 			<ul class="top-menu">
 				<li><a href="{{asset('/')}}">HOME</a></li>
 				<!--<li class="active">ABOUT US</li>
-				<li><a href="/services/">Wedding Foto</a></li>-->
+				<li><a href="/services/">Wedding Foto</a></li>
 
-				<li><a href="">REVIEWS</a></li>
+				<li><a href="">REVIEWS</a></li>-->
 
 				<li><a href="{{asset('about')}}">ABOUT</a></li>
 
@@ -70,25 +70,25 @@
 <br style="clear:both" />
 	<footer>
 		<div id="footer">
-			<div id="twitter">
+			<div id="WeddingFoto">
 				<h3 align="">WEDDING FOTO</h3>
                 <a href="">Wedding Foto</a>
 			</div>
-			<div id="sitemap">
+			<div id="LoveStory">
 				<h3>LOVE STORY</h3>
 				<div>
 					<a href="">Love Story</a>
 				</div>
 			</div>
-			<div id="twitter">
+			<div id="WeddingVideo">
             	<h3>WEDDING VIDEO</h3>
                 <a href="">Wedding Video</a>
             </div>
 			<div id="social">
 				<h3>SOCIAL NETWORKS</h3>
 				<a href="http://vk.com" target="blank"class="">vk</a><br>
-				<a href="http://twitter.com" target="blank"class="">twitter</a><br>
-				<a href="http://facebook.com" target="blank"class="">facebook</a><br>
+				<!--<a href="http://twitter.com" target="blank"class="">twitter</a><br>
+				<a href="http://facebook.com" target="blank"class="">facebook</a><br>-->
 			</div>
 			<div id="footer-logo">
 				<!--<a href="/"><img src="media/image/footer-logo.png" alt="Whitesquare logo"></a>
@@ -96,6 +96,6 @@
 			</div>
 		</div>
 	</footer>
-
+</div>
 </body>
 </html>

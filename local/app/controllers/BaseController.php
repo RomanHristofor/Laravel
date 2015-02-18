@@ -6,9 +6,9 @@ class BaseController extends Controller {
 	 * Setup the layout used by the controller.
 	 *
 	 * @return void
-	 */ //'media/bootstrap/bootstrap.min.css',
+	 */ //'media/bootstrap/bootstrap.min.css','http://fonts.googleapis.com/css?family=Oswald:400,300'
     public $title=null;
-    public $style=array('media/css/styles.css','http://fonts.googleapis.com/css?family=Oswald:400,300');
+    public $style=array('media/css/styles.css','media/bootstrap/bootstrap.min.css');
     public $script=array('http://html5shiv.googlecode.com/svn/trunk/html5.js','media/js/jquery.min.js',
                         'media/bootstrap/js/bootstrap.min.js',);
 	public function __construct()
