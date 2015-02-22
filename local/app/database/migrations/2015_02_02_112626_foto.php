@@ -16,7 +16,6 @@ class Foto extends Migration {
             $table->increments('id');
             $table->string('name',60);
             $table->string('photo',60);
-
             $table->timestamps();
         });
 	}

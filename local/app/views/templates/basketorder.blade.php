@@ -21,7 +21,7 @@
     <?$tovs = DB::table('foto')->where('id','=',$key)->first();?>
     @if(isset($tovs->id))
     <tr>
-        <td>{{$tovs->photo}}</td>
+        <td><img src="{{asset('media/uploads/photo/s_'.$tovs->photo)}}"/></td>
         <td>{{$tovs->name}}</td>
         <td>{{$price}}</td>
         <td>{{Form::open(array('url'=>'basket/index/'.$key))}}

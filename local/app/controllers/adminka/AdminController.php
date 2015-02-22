@@ -19,6 +19,7 @@ Class AdminController extends BaseController{
 
             'photo'  => 'required',
 
+
         ));
         if ($validation->fails()) {
             // В случае провала, редиректим обратно с ошибками и самими введенными данными
@@ -27,7 +28,6 @@ Class AdminController extends BaseController{
         DB::table('foto')->insert(
             array('name'=>Input::get('name'),
                 'photo'=>Input::get('photo'),
-
                 'created_at'=>date('Y-m-d h:i:s'),
                 'updated_at'=>date('Y-m-d h:i:s'),
             )
@@ -59,11 +59,12 @@ Class AdminController extends BaseController{
                 $picfile = $this->_img_edit($file,'photo');
                 //echo "fffl";
                 DB::table('foto')->insert(
-                    array(
-                        'name' => $data['name'],
-                        'photo' => $picfile)
-                );
-            }
+                                        array(
+                                            'name' => $data['name'],
+                                            'photo' => $picfile,
+                                            )
+                                        );
+            }//return View::make('adminka.admin')->with('picfile',$picfile);
         }return Redirect::to('adminka');
 
     }
@@ -122,7 +123,7 @@ Class AdminController extends BaseController{
         $uploads_success = $file->move($destinationPath,$filename);
         if($uploads_success){
            $im = Image::make($destinationPath. $filename);
-            $im -> resize(200,null, function($con){
+            $im -> resize(150,200, function($con){
                $con->aspectRatio();
             });
             $pic_small ='s_'.$filename;

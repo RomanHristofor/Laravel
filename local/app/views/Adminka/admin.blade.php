@@ -4,7 +4,7 @@
 <h2>Добро пожаловать в Админку</h2>
 <a href="{{asset('adminka/forma')}}">{{Form::submit('Добавить Фото')}}</a>
 
-<table width="100%" border="1px">
+<table width="100%" border="3px" cellpadding="7" cellspacing="0">
 
     <tr width="100%">
         <td width="200px">Фото</td>
@@ -22,7 +22,7 @@
     <?php $showhide_world = 'Отобразить';?>
     @endif
     <tr>
-        <td>{{$foto->photo}}</td>
+        <td><img src="{{asset('media/uploads/photo/s_'.$foto->photo)}}"/></td>
         <td>{{$foto->name}}</td>
         <td><a href="#" onclick="delete_position('{{asset('adminka/delete/'.$foto->id)}}','Вы действительно хотите удалить?')">Удалить фото</a><br>
             <a href="{{asset('adminka/edit/'.$foto->id)}}">Редактировать Фото</a><br>

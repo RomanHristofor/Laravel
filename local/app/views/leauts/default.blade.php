@@ -21,35 +21,32 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<a href="/"><img src="media/image/logo.png" alt="Whitesquare logo"></a>
-			<form name="search" action="#" method="get">
-				<input type="text" name="q" placeholder="Search"><button type="submit">GO</button>
-			</form>
+			<a href="/"><img src='{{asset("media/image/logo.png")}}' alt="Khristofor Studio"></a>
 		</header>
 		<nav>
 			<ul class="top-menu">
-				<li><a href="{{asset('/')}}">HOME</a></li>
+				<li class="active"><a href="{{asset('/')}}">home</a></li>
 				<!--<li class="active">ABOUT US</li>
 				<li><a href="/services/">Wedding Foto</a></li>
 
 				<li><a href="">REVIEWS</a></li>-->
 
-				<li><a href="{{asset('about')}}">ABOUT</a></li>
+				<li><a href="{{asset('about')}}">about</a></li>
 
-				<li><a href="{{asset('contact')}}">CONTACT</a></li>
+				<li><a href="{{asset('contact')}}">contact</a></li>
 
-                <li><a href="{{asset('auth/reg')}}">CHECK IN</a></li>
-                <li><a href="{{asset('basket')}}">BASKET ORDER</a></li>
+                <li><a href="{{asset('auth/reg')}}">check in</a></li>
+                <li><a href="{{asset('basket')}}">basket order</a></li>
 
+                <li><a href="{{asset('fotos')}}">Wedding Foto</a></li>
+                <li><a href="">Love Story</a></li>
+                <li><a href="">Wedding Video</a></li>
                 {{$links}}
+            </ul>
+        </nav>
+@yield('content')
 
-
-			</ul>
-		</nav>
-		<div id="heading">
-			<h3></h3>
-		</div>
-		<aside>
+		<!--<aside>
 			<nav>
 				<ul class="aside-menu">
 					<li><a href="{{asset('fotos')}}">Wedding Foto</a></li>
@@ -61,11 +58,11 @@
 			</nav>
 
 			<p>
-				<img src="media/image/my.jpg" width="230" height="180" alt="">
+				<img src='{{asset("media/image/my.jpg")}}' width="230" height="180" alt="">
 			</p>
-		</aside>
+		</aside>-->
 
-@yield('content')
+
 
 <br style="clear:both" />
 	<footer>

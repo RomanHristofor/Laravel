@@ -42,7 +42,9 @@ Route::group(array('before'=>'auth'),function(){
 Route::controller('auth', 'AuthController');
 
 Route::group(array('before'=>'admin'),function(){
+    Route::controller('adminka/orders','OrdersController');
     Route::controller('adminka','AdminController');
+
 });
 
 Route::get('/{id?}',[
