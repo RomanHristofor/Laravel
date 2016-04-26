@@ -25,22 +25,14 @@
 		</header>
 		<nav>
 			<ul class="top-menu">
-				<li class="active"><a href="{{asset('/')}}">home</a></li>
-				<!--<li class="active">ABOUT US</li>
-				<li><a href="/services/">Wedding Foto</a></li>
-
-				<li><a href="">REVIEWS</a></li>-->
-
-				<li><a href="{{asset('about')}}">about</a></li>
-
-				<li><a href="{{asset('contact')}}">contact</a></li>
-
-                <li><a href="{{asset('auth/reg')}}">check in</a></li>
-                <li><a href="{{asset('basket')}}">basket order</a></li>
-
+				<li><a href="{{asset('/')}}">Home</a></li>
                 <li><a href="{{asset('fotos')}}">Wedding Foto</a></li>
                 <li><a href="">Love Story</a></li>
                 <li><a href="">Wedding Video</a></li>
+                <li><a href="{{asset('basket')}}">Basket order</a></li>
+                <li><a href="{{asset('auth/reg')}}">Registration</a></li>
+                <li><a href="{{asset('about')}}">About</a></li>
+                <li><a href="{{asset('contact')}}">Contact</a></li>
                 {{$links}}
             </ul>
         </nav>
