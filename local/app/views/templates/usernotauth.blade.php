@@ -1,0 +1,1 @@
+<li><a href="{{asset('auth/login')}}">LOG IN</a></li>
